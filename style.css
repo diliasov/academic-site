@@ -1,0 +1,91 @@
+:root{
+  --navy:#0D264D;
+  --navy-tint:#E8EDF5;
+  --text:#1F2937;
+  --muted:#5B6575;
+  --bg:#FFFFFF;
+  --line:#D5DCE8;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-text-size-adjust:100%}
+.wrap{max-width:1040px;margin:0 auto;padding:0 23px}
+/* header / menu */
+.site-header{border-bottom:1.5px solid var(--navy);background:#fff;position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;min-height:64px}
+.nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav a{font-family:var(--sans);font-size:16px;color:var(--navy);text-decoration:none;padding:8px 18px;border-radius:999px;font-weight:500}
+.nav a:hover{background:var(--navy-tint)}
+.nav a[aria-current="page"]{background:var(--navy);color:#fff;font-weight:700}
+.menu-toggle{display:none;margin-left:auto;background:none;border:0;padding:10px;cursor:pointer;color:var(--navy)}
+.menu-toggle svg{display:block}
+/* type */
+h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:600;line-height:1.2;margin:0}
+h1{font-size:48px;margin:48px 0 10px}
+h2{font-size:28px;margin:44px 0 12px}
+h3{font-size:22px;margin:30px 0 10px}
+p{margin:0 0 16px}
+a{color:var(--navy)}
+.lead{font-size:20px;color:var(--navy);font-weight:600;margin:0 0 6px}
+.tagline{font-size:18px;color:var(--muted);margin:0 0 24px}
+/* buttons */
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;margin:6px 0 8px}
+.btn{display:inline-block;padding:11px 28px;border:1.5px solid var(--navy);border-radius:999px;color:var(--navy);background:#fff;text-decoration:none;font-weight:600;font-size:16px}
+.btn:hover{background:var(--navy-tint)}
+.btn.primary{background:var(--navy);color:#fff}
+.btn.primary:hover{background:#163663}
+/* about */
+.about{display:flex;gap:44px;align-items:flex-start}
+.about .text{flex:1}
+.about img{width:210px;height:auto;border-radius:6px;object-fit:cover;flex:none;margin-top:6px;background:var(--navy-tint)}
+.divider{border:0;border-top:1px solid var(--line);margin:36px 0 0}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--navy);border-radius:4px;padding:2px 8px;margin-bottom:6px}
+.link-row{display:flex;gap:30px;flex-wrap:wrap;margin:36px 0 0;padding:0;list-style:none}
+.link-row a{font-family:var(--serif);font-size:20px;text-decoration:none;border-bottom:1.5px solid var(--navy)}
+.awards{margin:0 0 0;padding-left:20px}
+.awards li{margin-bottom:6px}
+/* research */
+.jump{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 6px}
+.jump a{display:inline-block;padding:8px 20px;border-radius:999px;background:var(--navy-tint);text-decoration:none;font-weight:600;font-size:15px}
+.jump a:hover{background:var(--navy);color:#fff}
+.paper{margin:0 0 30px}
+.paper .title{font-weight:600;color:var(--navy);font-size:18px;margin:0 0 4px}
+.paper .ssrn{margin:0 0 8px;font-size:15px;color:var(--muted)}
+.paper .ssrn a{word-break:break-all}
+.paper .abs{margin:0;font-size:16px}
+.wip{padding-left:22px}
+.wip li{margin-bottom:8px}
+.top{display:inline-block;margin-top:6px;font-size:14px;color:var(--muted);text-decoration:none}
+.top:hover{color:var(--navy);text-decoration:underline}
+/* lists */
+.year{margin:26px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+.year:first-of-type{border-top:0;padding-top:0}
+.year h3{margin:0 0 8px}
+.inst{font-weight:700;margin:14px 0 4px}
+ul.mods{margin:0 0 6px;padding-left:22px}
+ul.mods li{margin-bottom:3px}
+.conf-year{margin:26px 0 0;padding-top:16px;border-top:1px solid var(--line)}
+.conf-year:first-of-type{border-top:0;padding-top:0}
+.conf-year h3{margin:0 0 8px}
+.note{color:var(--muted);font-size:15px}
+/* footer */
+.site-footer{margin-top:64px;padding:26px 0 40px;border-top:1.5px solid var(--navy);color:var(--muted);font-size:15px}
+.site-footer p{margin:0 0 4px}
+.page-body{padding-bottom:10px}
+/* mobile */
+@media (max-width:720px){
+  body{font-size:16px}
+  h1{font-size:36px;margin-top:32px}
+  h2{font-size:24px;margin-top:32px}
+  .site-header .wrap{flex-wrap:wrap}
+  .menu-toggle{display:block}
+  .nav{display:none;width:100%;flex-direction:column;padding:4px 0 14px;gap:4px}
+  .nav.open{display:flex}
+  .nav a{padding:10px 16px}
+  .about{flex-direction:column-reverse;gap:18px}
+  .about img{width:150px}
+  .btn-row{gap:10px}
+  .link-row{gap:18px}
+}
